@@ -30,7 +30,6 @@ jobs:
           buildozer --version
 
       - name: 构建 APK
-        working-directory: android_app
         run: |
           buildozer android debug
 
