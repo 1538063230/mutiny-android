@@ -29,8 +29,10 @@ jobs:
       - name: 构建 APK
         env:
           P4A_ACCEPT_ALL: 'True'
- run: |
-          buildozer android debug - name: 上传 APK
+        run: |
+          buildozer android debug
+
+      - name: 上传 APK
         uses: actions/upload-artifact@v4
         with:
           name: mutiny-android-apk
